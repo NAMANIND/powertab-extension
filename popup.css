@@ -1,0 +1,271 @@
+html {
+  width: 400px;
+  height: 500px;
+}
+
+body {
+  margin: 0px;
+}
+
+/* Styles for tabs and navigation */
+.tab {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.remove-button {
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Styles for navigation */
+nav {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* background: linear-gradient(180deg, #00c5fb 0%, #3a6dda 100%); */
+  background: #030f2b;
+  padding: 10px 8px;
+}
+
+nav div {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+
+  color: rgba(255, 255, 255, 0.595);
+  background-color: transparent;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.3s;
+}
+
+/* linear-gradient(0deg, #00c5fb 0%, #175bea 100%); */
+
+nav div.active {
+  border-bottom-color: white;
+  color: white;
+}
+
+nav div:not(:last-child) {
+  margin-right: 10px;
+}
+
+.division {
+  color: rgba(255, 255, 255, 0.595);
+  margin: 0;
+}
+
+h2 {
+  color: #030f2b;
+}
+
+img {
+  width: auto;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+/* Styles for save section */
+#saveSection {
+  display: none;
+  /* Hide save section by default */
+}
+
+#viewSection,
+#saveSection {
+  margin-top: 20px;
+  margin: 0px 20px;
+  padding-bottom: 20px;
+}
+#saveNameInput {
+  margin-bottom: 10px;
+}
+
+#saveButton {
+  margin-bottom: 10px;
+}
+
+.add-button {
+  cursor: pointer;
+  width: fit-content;
+  height: 20px;
+  border: 2px solid #007bff;
+  padding-left: 10px;
+
+  border-radius: 5px;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-button:hover {
+  background-color: #0056b3;
+}
+#popupSaveActiveTabs {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.popup {
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.popup input[type="text"] {
+  margin-bottom: 10px;
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.popup button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.popup img {
+  mix-blend-mode: difference;
+}
+
+.popup button:hover {
+  background-color: #0056b3;
+}
+
+#closePopupButton {
+  width: auto;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* saved tabs */
+
+/* Add this to your CSS file */
+#savedTabsSection {
+  margin-top: 20px;
+}
+
+.folder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
+}
+
+.folder-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.open-all-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+#savedTabsList img {
+  vertical-align: middle;
+}
+
+#executeCodeSection {
+  display: none;
+  margin-top: 20px;
+  margin: 10px 20px;
+}
+
+#executeCodeSection h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+#sharedCode {
+  width: auto;
+  height: 50px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.executeCode {
+  display: flex;
+  flex-direction: column;
+}
+
+#executeCode {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#executeCode:hover {
+  background-color: #0056b3; /* Darken the background color on hover */
+}
+
+.copy-button.clicked {
+  opacity: 0;
+}
+
+.copy-button {
+  cursor: pointer;
+}

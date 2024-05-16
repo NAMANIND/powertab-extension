@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Manager</title>
+    <link type="text/css" rel="stylesheet" href="popup.css">
+
+</head>
+
+<body>
+    <nav>
+        <div id="viewTabsButton" class="active">Active Tabs</div>
+        <h1 class="division">|</h1>
+        <div id="savedTabsButton">Saved Tabs</div>
+        <h1 class="division">|</h1>
+        <div id="executeCodeButton">Execute Code</div>
+    </nav>
+
+    <!-- View Tabs Section -->
+    <div id="viewSection">
+        <div class="head">
+            <h2>Active Tabs:</h2>
+
+            <span id="saveActiveTabs" class="add-button" title="Save Tabs">
+                Save
+                <img width="30px" height="30px" src="./images/add-svgrepo-com.png">
+
+
+            </span>
+        </div>
+
+
+        <div id="activeTabsContent"></div>
+    </div>
+
+
+    <!-- Save Tabs Section -->
+    <div id="saveSection">
+
+        <div class="head">
+            <h2>Saved Tabs:</h2>
+        </div>
+        <div id="savedTabsList"></div>
+    </div>
+
+
+    <!-- New Section for Code Execution -->
+    <div id="executeCodeSection" style="display: none;">
+        <div class="executeCode">
+            <h2>Paste Here:</h2>
+            <textarea id="sharedCode" placeholder="Paste shared code here"></textarea>
+            <button id="executeCode">Execute Code</button>
+        </div>
+    </div>
+
+
+
+    <!-- Popup for saving active tabs -->
+    <div id="popupSaveActiveTabs" style="display: none;">
+        <div class="popup">
+            <div id="closePopupButton">
+                <h2>Work Name:</h2>
+
+                <img src="./images/cross.png" title="Close" width="30px" height="30px">
+            </div>
+            <input type="text" id="saveActiveTabsName" placeholder="Enter work name">
+            <button id="saveActiveTabsButton">Done</button>
+        </div>
+    </div>
+
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
